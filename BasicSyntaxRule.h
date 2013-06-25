@@ -2,10 +2,10 @@
 //BasicSyntaxRule:20130617
 #include <iostream>
 #include <functional>
+#include <memory>
 #include <map>
 #include <utility>
-#include "BasicParser.h"
-#include "SyntaxTree.h"
+#include "TokenBuffer.h"
 
 namespace parsia
 {

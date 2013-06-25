@@ -5,7 +5,8 @@
 #include <vector>
 #include "Lexer.h"
 
-namespace parsia
+namespace parsia {
+namespace sample
 {
 using Token = lexia::Token;
 
@@ -35,12 +36,12 @@ public:
 
 	auto ToString() -> std::string {
 		if(child_tree_list_.empty()){
-			return parsia::ToString(token_);
+			return sample::ToString(token_);
 		}
 		std::vector<std::string> str_buffer;
 		if(!IsNil()){
 			str_buffer.push_back("(");
-			str_buffer.push_back(parsia::ToString(token_));
+			str_buffer.push_back(sample::ToString(token_));
 			str_buffer.push_back(" ");	
 		}
 		for(unsigned int i = 0; i < child_tree_list_.size(); ++i){
@@ -67,4 +68,4 @@ private:
 
 };
 }
-
+}

@@ -2,7 +2,7 @@
 #include "SyntaxTree.h"
 #include <iostream>
 
-using namespace parsia;
+using namespace parsia::sample;
 
 int main(int argc, char* argv[])
 {
@@ -10,9 +10,9 @@ int main(int argc, char* argv[])
 	auto child2  = SyntaxTree::Create(Token(lexia::TokenType::IDENTIFIER(), lexia::Word("b")));
 	auto child3  = SyntaxTree::Create(Token(lexia::TokenType::IDENTIFIER(), lexia::Word("c")));
 	auto root = SyntaxTree::Create(Token(lexia::TokenType::PLUS(), lexia::Word("+")));
-	root->AddChildNode(child1);
-	root->AddChildNode(child2);
-	child1->AddChildNode(child3);
+	root->AddChild(child1);
+	root->AddChild(child2);
+	child1->AddChild(child3);
 	std::cout << root->ToString() << std::endl;
     return 0;
 }
