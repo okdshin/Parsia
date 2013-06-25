@@ -1,10 +1,11 @@
-#ifdef PARSER_UNIT_TEST
-#include "Parser.h"
+#ifdef BASICPARSER_UNIT_TEST
+#include "BasicParser.h"
 #include <iostream>
 #include <fstream>
 #include <streambuf>
 
 using namespace parsia;
+using Parser = BasicParser<SyntaxTree::Ptr>;
 
 int main(int argc, char* argv[])
 {
@@ -18,9 +19,9 @@ int main(int argc, char* argv[])
 	SyntaxTree::Ptr root;
 
 	parser.DefineSyntaxRule("program")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
 			root = cons;
@@ -33,25 +34,25 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("external_declaration")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##external_declaration1");
 			return processor("declaration");
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##external_declaration2");
 			return processor("function_definition");
 		}));
 
 	parser.DefineSyntaxRule("declaration")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##declaration");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -63,9 +64,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("declarator_list")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##declarator_list");
 			auto dec = processor("declarator");
@@ -84,9 +85,9 @@ int main(int argc, char* argv[])
 		}));	
 
 	parser.DefineSyntaxRule("declarator")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##declarator");
 			return parsia::SyntaxTree::Create(
@@ -94,9 +95,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("function_definition")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##function_definition1");
 			auto cons1 = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -110,9 +111,9 @@ int main(int argc, char* argv[])
 			cons1->AddChild(processor("compound_statement"));
 			return cons1;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##function_definition2");
 			auto cons1 = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -130,9 +131,9 @@ int main(int argc, char* argv[])
 		;	
 
 	parser.DefineSyntaxRule("parameter_type_list")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##parameter_type_list");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -146,9 +147,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("parameter_declaration")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##parameter_declaration");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -159,33 +160,33 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("statement")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement1");
 			buffer->Match(lexia::TokenType::SEMICOLON());
 			return parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement2");
 			auto exp = processor("expression");
 			buffer->Match(lexia::TokenType::SEMICOLON());
 			return exp;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement3");
 			return processor("compound_statement");
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement4");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -199,9 +200,9 @@ int main(int argc, char* argv[])
 			cons->AddChild(processor("statement"));
 			return cons;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement5");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -213,9 +214,9 @@ int main(int argc, char* argv[])
 			cons->AddChild(processor("statement"));
 			return cons;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement6");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -227,9 +228,9 @@ int main(int argc, char* argv[])
 			cons->AddChild(processor("statement"));
 			return cons;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement7");
 			auto ret = parsia::SyntaxTree::Create(
@@ -237,9 +238,9 @@ int main(int argc, char* argv[])
 			buffer->Match(lexia::TokenType::SEMICOLON());
 			return ret;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement8");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -251,18 +252,18 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("compound_statement")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##compound_statement1");
 			buffer->Match(lexia::TokenType::LEFT_BRACE());
 			buffer->Match(lexia::TokenType::RIGHT_BRACE());
 			return parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##compound_statement2");
 			buffer->Match(lexia::TokenType::LEFT_BRACE());
@@ -270,9 +271,9 @@ int main(int argc, char* argv[])
 			buffer->Match(lexia::TokenType::RIGHT_BRACE());
 			return dec;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##compound_statement3");
 			buffer->Match(lexia::TokenType::LEFT_BRACE());
@@ -280,9 +281,9 @@ int main(int argc, char* argv[])
 			buffer->Match(lexia::TokenType::RIGHT_BRACE());
 			return sta;
 		}))
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##compound_statement4");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -294,9 +295,9 @@ int main(int argc, char* argv[])
 		}));
 	
 	parser.DefineSyntaxRule("declaration_list")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##declaration_list");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -308,9 +309,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("statement_list")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##statement_list");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -336,9 +337,9 @@ int main(int argc, char* argv[])
 		;
 	
 	parser.DefineSyntaxRule("expression")
-		->AddChoice(SyntaxRule::Choice([](
+		->AddChoice(Parser::SyntaxRule::Choice([](
 				const TokenBuffer::Ptr& buffer,
-				const SyntaxRule::RuleProcessor& processor)
+				const Parser::SyntaxRule::RuleProcessor& processor)
 				-> const SyntaxTree::Ptr { 
 			buffer->DebugPrint("##expression");
 			auto ass = processor("assign_expression");
@@ -357,9 +358,9 @@ int main(int argc, char* argv[])
 		;
 	
 	parser.DefineSyntaxRule("assign_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##assign_expression1");
 			auto left_id = parsia::SyntaxTree::Create(
@@ -373,18 +374,18 @@ int main(int argc, char* argv[])
 			cons->AddChild(right_exp);
 			return cons;
 		}))
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##assign_expression2");
 			return processor("logical_or_expression");
 		}));
 
 	parser.DefineSyntaxRule("logical_or_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##logical_or_expression");
 			auto first_exp = processor("logical_and_expression");
@@ -410,9 +411,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("logical_and_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##logical_and_expression");
 			auto first_exp = processor("equality_expression");
@@ -438,9 +439,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("equality_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##equality_expression");
 			auto first_exp = processor("relational_expression");
@@ -471,9 +472,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("relational_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##relational_expression");
 			auto first_exp = processor("add_expression");
@@ -508,9 +509,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("add_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##add_expression");
 			auto first_exp = processor("multiply_expression");
@@ -541,9 +542,9 @@ int main(int argc, char* argv[])
 		}));
 	
 	parser.DefineSyntaxRule("multiply_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##multiply_expression");
 			auto first_exp = processor("unary_expression");
@@ -574,9 +575,9 @@ int main(int argc, char* argv[])
 		}));
 	
 	parser.DefineSyntaxRule("unary_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##unary_expression");
 			if(buffer->LookAheadTokenType(1) == lexia::TokenType::MINUS()){
@@ -592,9 +593,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("postfix_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##postfix_expression1");
 			auto id = parsia::SyntaxTree::Create(
@@ -603,9 +604,9 @@ int main(int argc, char* argv[])
 			buffer->Match(lexia::TokenType::RIGHT_PARENTHESIS());
 			return id;
 		}))
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##postfix_expression2");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());
@@ -616,18 +617,18 @@ int main(int argc, char* argv[])
 			buffer->Match(lexia::TokenType::RIGHT_PARENTHESIS());
 			return cons;
 		}))
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##postfix_expression3");
 			return processor("primary_expression");	
 		}));
 
 	parser.DefineSyntaxRule("primary_expression")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##primary_expression");
 			if(buffer->LookAheadTokenType(1) 
@@ -649,9 +650,9 @@ int main(int argc, char* argv[])
 		}));
 
 	parser.DefineSyntaxRule("argument_expression_list")
-		->AddChoice(SyntaxRule::Choice([&root](
+		->AddChoice(Parser::SyntaxRule::Choice([&root](
 				const TokenBuffer::Ptr& buffer, 
-				const SyntaxRule::RuleProcessor& processor
+				const Parser::SyntaxRule::RuleProcessor& processor
 				) -> const SyntaxTree::Ptr {
 			buffer->DebugPrint("##argument_expression_list");
 			auto cons = parsia::SyntaxTree::Create(lexia::Token::CONS_TOKEN());

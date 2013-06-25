@@ -1,33 +1,34 @@
 #pragma once
-//SyntaxRule:20130617
+//BasicSyntaxRule:20130617
 #include <iostream>
 #include <functional>
 #include <map>
 #include <utility>
-#include "Parser.h"
+#include "BasicParser.h"
 #include "SyntaxTree.h"
 
 namespace parsia
 {
-class SyntaxRule : public std::enable_shared_from_this<SyntaxRule> {
+template<class ReturnType>
+class BasicSyntaxRule : public std::enable_shared_from_this<BasicSyntaxRule<ReturnType>> {
 public:
-	using Ptr = std::shared_ptr<SyntaxRule>;
+	using Ptr = std::shared_ptr<BasicSyntaxRule>;
 	using RuleProcessor = 
-		std::function<const SyntaxTree::Ptr (const std::string& rule_name)>;
+		std::function<const ReturnType (const std::string& rule_name)>;
 	using Choice = std::function<
-		SyntaxTree::Ptr (const TokenBuffer::Ptr&, const RuleProcessor&)>;
+		const ReturnType (const TokenBuffer::Ptr&, const RuleProcessor&)>;
 
 	static auto Create() -> Ptr {
-		return Ptr(new SyntaxRule());	
+		return Ptr(new BasicSyntaxRule());	
 	}
 
 	auto AddChoice(const Choice& choice) -> Ptr {
 		choice_list_.push_back(choice);
-		return shared_from_this();
+		return BasicSyntaxRule<ReturnType>::shared_from_this();
 	}
 
 	auto ProcessRule(const TokenBuffer::Ptr& token_buffer, 
-			const RuleProcessor& rule_processor) -> SyntaxTree::Ptr {
+			const RuleProcessor& rule_processor) -> ReturnType {
 		if(!token_buffer->IsSpeculating()){
 			memo_.clear();
 		}
@@ -54,7 +55,7 @@ private:
 		int end_token_index_;
 	};
 
-	SyntaxRule() : choice_list_(), memo_(){}
+	BasicSyntaxRule() : choice_list_(), memo_(){}
 
 	auto SpeculatingChoice(const Choice& choice, 
 			const TokenBuffer::Ptr& token_buffer, 
@@ -73,7 +74,7 @@ private:
 	}
 
 	auto DoProcessRule(const TokenBuffer::Ptr& token_buffer, 
-			const RuleProcessor& rule_processor) -> SyntaxTree::Ptr {
+			const RuleProcessor& rule_processor) -> ReturnType {
 		if(choice_list_.size()==1){
 			return choice_list_.front()(token_buffer, rule_processor);
 		}
@@ -86,7 +87,7 @@ private:
 			throw SyntaxError("SyntaxError: invalid syntax.");
 		}
 		assert(!"never read this line.");
-		return SyntaxTree::Ptr();
+		return ReturnType();
 	}
 
 	
@@ -97,7 +98,7 @@ private:
 	}
 
 	auto ProcessRuleWithMemoization(const TokenBuffer::Ptr& token_buffer, 
-			const RuleProcessor& rule_processor) -> SyntaxTree::Ptr {
+			const RuleProcessor& rule_processor) -> ReturnType {
 		const auto start_token_index = token_buffer->GetLookAheadIndex();
 		if(token_buffer->IsSpeculating()){
 			const auto memo_info_iter = memo_.find(start_token_index);
@@ -106,7 +107,7 @@ private:
 					token_buffer->SetLookAheadIndex(
 						memo_info_iter->second.GetEndTokenIndex());
 					//DebugPrint("short cut by memo.");
-					return SyntaxTree::Ptr();
+					return ReturnType();
 				}
 				else {
 					throw SyntaxError("SyntaxError: checked this error before.");	

@@ -1,9 +1,9 @@
 CXX = g++ -std=gnu++11
-CXXFLAGS = -Wall -g -D PARSER_UNIT_TEST
+CXXFLAGS = -Wall -g -D BASICSYNTAXRULE_UNIT_TEST
 INCLUDES = 
 LIBS = -lboost_regex
-OBJS = Parser.o
-PROGRAM = Parser.out
+OBJS = BasicSyntaxRule.o
+PROGRAM = BasicSyntaxRule.out
 
 all:$(PROGRAM)
 

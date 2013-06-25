@@ -1,5 +1,5 @@
-#ifdef SYNTAXRULE_UNIT_TEST
-#include "SyntaxRule.h"
+#ifdef BASICSYNTAXRULE_UNIT_TEST
+#include "BasicSyntaxRule.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -14,34 +14,34 @@ int main(int argc, char* argv[])
 	lexia::Lexer lexer(code);
 	auto parser = Parser::Create(lexer);
 
-	auto program = SyntaxRule(parser); 
-	auto external_declaration = SyntaxRule(parser);
-	auto declaration = SyntaxRule(parser);
-	auto function_definition = SyntaxRule(parser);	
-	auto declarator_list = SyntaxRule(parser);
-	auto declarator = SyntaxRule(parser);
-	auto parameter_type_list = SyntaxRule(parser);
-	auto parameter_declaration = SyntaxRule(parser);
-	auto statement = SyntaxRule(parser);
-	auto compound_statement = SyntaxRule(parser);
-	auto declaration_list = SyntaxRule(parser);
-	auto statement_list = SyntaxRule(parser);
-	auto expression = SyntaxRule(parser);
-	auto assign_expression = SyntaxRule(parser);
-	auto logical_or_expression = SyntaxRule(parser);
-	auto logical_and_expression = SyntaxRule(parser);
-	auto equality_expression = SyntaxRule(parser);
-	auto relational_expression = SyntaxRule(parser);
-	auto add_expression = SyntaxRule(parser);
-	auto multiply_expression = SyntaxRule(parser);
-	auto unary_expression = SyntaxRule(parser);
-	auto postfix_expression = SyntaxRule(parser);
-	auto primary_expression = SyntaxRule(parser);
-	auto argument_expression_list = SyntaxRule(parser);
+	auto program = BasicSyntaxRule(parser); 
+	auto external_declaration = BasicSyntaxRule(parser);
+	auto declaration = BasicSyntaxRule(parser);
+	auto function_definition = BasicSyntaxRule(parser);	
+	auto declarator_list = BasicSyntaxRule(parser);
+	auto declarator = BasicSyntaxRule(parser);
+	auto parameter_type_list = BasicSyntaxRule(parser);
+	auto parameter_declaration = BasicSyntaxRule(parser);
+	auto statement = BasicSyntaxRule(parser);
+	auto compound_statement = BasicSyntaxRule(parser);
+	auto declaration_list = BasicSyntaxRule(parser);
+	auto statement_list = BasicSyntaxRule(parser);
+	auto expression = BasicSyntaxRule(parser);
+	auto assign_expression = BasicSyntaxRule(parser);
+	auto logical_or_expression = BasicSyntaxRule(parser);
+	auto logical_and_expression = BasicSyntaxRule(parser);
+	auto equality_expression = BasicSyntaxRule(parser);
+	auto relational_expression = BasicSyntaxRule(parser);
+	auto add_expression = BasicSyntaxRule(parser);
+	auto multiply_expression = BasicSyntaxRule(parser);
+	auto unary_expression = BasicSyntaxRule(parser);
+	auto postfix_expression = BasicSyntaxRule(parser);
+	auto primary_expression = BasicSyntaxRule(parser);
+	auto argument_expression_list = BasicSyntaxRule(parser);
 	
 	program
 		.AddChoice(
-			SyntaxRule::Choice([&]() -> void {
+			BasicSyntaxRule::Choice([&]() -> void {
 				parser->DebugPrint("##program");
 				external_declaration();
 				while(parser->LookAheadTokenType(1) 
@@ -51,18 +51,18 @@ int main(int argc, char* argv[])
 			}));
 	external_declaration
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##external_declaration1");
 				declaration();
 			}))
-		.AddChoice(SyntaxRule::Choice([&](){
+		.AddChoice(BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##external_declaration2");
 				function_definition();
 			}));
 
 	declaration
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##declaration");
 				parser->Match(lexia::TokenType::INT());
 				declarator_list();
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
 
 	declarator_list
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##declarator_list");
 				declarator();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::COMMA()){
@@ -82,14 +82,14 @@ int main(int argc, char* argv[])
 
 	declarator
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##declarator");
 				parser->Match(lexia::TokenType::IDENTIFIER());	
 			}));
 
 	function_definition
 		.AddChoice(
-			SyntaxRule::Choice([&]() -> void {
+			BasicSyntaxRule::Choice([&]() -> void {
 				parser->DebugPrint("##function_definition1");
 				parser->Match(lexia::TokenType::INT());
 				declarator();
@@ -98,7 +98,7 @@ int main(int argc, char* argv[])
 				compound_statement();
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##function_definition2");
 				parser->Match(lexia::TokenType::INT());
 				declarator();
@@ -110,7 +110,7 @@ int main(int argc, char* argv[])
 
 	parameter_type_list
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##parameter_type_list");
 				parameter_declaration();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::COMMA()){
@@ -121,7 +121,7 @@ int main(int argc, char* argv[])
 
 	parameter_declaration
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##parameter_declaration");
 				parser->Match(lexia::TokenType::INT());
 				declarator();
@@ -129,23 +129,23 @@ int main(int argc, char* argv[])
 
 	statement
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement1");
 				parser->Match(lexia::TokenType::SEMICOLON());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement2");
 				expression();
 				parser->Match(lexia::TokenType::SEMICOLON());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement3");
 				compound_statement();
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement4");
 				parser->Match(lexia::TokenType::IF());
 				parser->Match(lexia::TokenType::LEFT_PARENTHESIS());
@@ -156,7 +156,7 @@ int main(int argc, char* argv[])
 				statement();
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement5");
 				parser->Match(lexia::TokenType::IF());
 				parser->Match(lexia::TokenType::LEFT_PARENTHESIS());
@@ -165,7 +165,7 @@ int main(int argc, char* argv[])
 				statement();
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement6");
 				parser->Match(lexia::TokenType::WHILE());
 				parser->Match(lexia::TokenType::LEFT_PARENTHESIS());
@@ -174,13 +174,13 @@ int main(int argc, char* argv[])
 				statement();
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement7");
 				parser->Match(lexia::TokenType::RETURN());
 				parser->Match(lexia::TokenType::SEMICOLON());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement8");
 				parser->Match(lexia::TokenType::RETURN());
 				expression();
@@ -189,27 +189,27 @@ int main(int argc, char* argv[])
 
 	compound_statement
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##compound_statement1");
 				parser->Match(lexia::TokenType::LEFT_BRACE());
 				parser->Match(lexia::TokenType::RIGHT_BRACE());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##compound_statement2");
 				parser->Match(lexia::TokenType::LEFT_BRACE());
 				declaration_list();
 				parser->Match(lexia::TokenType::RIGHT_BRACE());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##compound_statement3");
 				parser->Match(lexia::TokenType::LEFT_BRACE());
 				statement_list();
 				parser->Match(lexia::TokenType::RIGHT_BRACE());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##compound_statement4");
 				parser->Match(lexia::TokenType::LEFT_BRACE());
 				declaration_list();
@@ -219,7 +219,7 @@ int main(int argc, char* argv[])
 	
 	declaration_list
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##declaration_list");
 				declaration();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::INT()){
@@ -229,7 +229,7 @@ int main(int argc, char* argv[])
 
 	statement_list
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##statement_list");
 				statement();
 				while(parser->LookAheadTokenType(1) 
@@ -252,7 +252,7 @@ int main(int argc, char* argv[])
 
 	expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##expression");
 				assign_expression();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::COMMA()){
@@ -263,21 +263,21 @@ int main(int argc, char* argv[])
 
 	assign_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##assign_expression1");
 				parser->Match(lexia::TokenType::IDENTIFIER());
 				parser->Match(lexia::TokenType::EQUAL());
 				assign_expression();
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##assign_expression2");
 				logical_or_expression();
 			}));
 
 	logical_or_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##logical_or_expression");
 				logical_and_expression();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::OR()){
@@ -288,7 +288,7 @@ int main(int argc, char* argv[])
 
 	logical_and_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##logical_and_expression");
 				equality_expression();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::AND()){
@@ -299,7 +299,7 @@ int main(int argc, char* argv[])
 
 	equality_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##equality_expression");
 				relational_expression();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::EQUALEQUAL() 
@@ -312,7 +312,7 @@ int main(int argc, char* argv[])
 
 	relational_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##relational_expression");
 				add_expression();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::LOWER_THAN() 
@@ -329,7 +329,7 @@ int main(int argc, char* argv[])
 
 	add_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##add_expression");
 				multiply_expression();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::PLUS() 
@@ -341,7 +341,7 @@ int main(int argc, char* argv[])
 	
 	multiply_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##multiply_expression");
 				unary_expression();
 				while(parser->LookAheadTokenType(1) == lexia::TokenType::MULTIPLY() 
@@ -353,7 +353,7 @@ int main(int argc, char* argv[])
 	
 	unary_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##unary_expression");
 				if(parser->LookAheadTokenType(1) == lexia::TokenType::MINUS()){
 					parser->Match(lexia::TokenType::MINUS());
@@ -366,14 +366,14 @@ int main(int argc, char* argv[])
 
 	postfix_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##postfix_expression1");
 				parser->Match(lexia::TokenType::IDENTIFIER());
 				parser->Match(lexia::TokenType::LEFT_PARENTHESIS());
 				parser->Match(lexia::TokenType::RIGHT_PARENTHESIS());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##postfix_expression2");
 				parser->Match(lexia::TokenType::IDENTIFIER());
 				parser->Match(lexia::TokenType::LEFT_PARENTHESIS());
@@ -381,14 +381,14 @@ int main(int argc, char* argv[])
 				parser->Match(lexia::TokenType::RIGHT_PARENTHESIS());
 			}))
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##postfix_expression3");
 				primary_expression();	
 			}));
 
 	primary_expression
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##primary_expression");
 				if(parser->LookAheadTokenType(1) 
 						== lexia::TokenType::IDENTIFIER()){	
@@ -407,7 +407,7 @@ int main(int argc, char* argv[])
 
 	argument_expression_list
 		.AddChoice(
-			SyntaxRule::Choice([&](){
+			BasicSyntaxRule::Choice([&](){
 				parser->DebugPrint("##argument_expression_list");
 				assign_expression();
 				while(parser->LookAheadTokenType(1) 
