@@ -5,12 +5,14 @@
 #include <memory>
 #include <map>
 #include <utility>
+#include <cassert>
 #include "TokenBuffer.h"
 
 namespace parsia
 {
 template<class ReturnType>
-class BasicSyntaxRule : public std::enable_shared_from_this<BasicSyntaxRule<ReturnType>> {
+class BasicSyntaxRule : 
+		public std::enable_shared_from_this<BasicSyntaxRule<ReturnType>> {
 public:
 	using Ptr = std::shared_ptr<BasicSyntaxRule>;
 	using RuleProcessor = 
@@ -66,7 +68,7 @@ private:
 			choice(token_buffer, rule_processor);	
 		}
 		catch(const SyntaxError& e){
-			//DebugPrint("ChoiceError");
+			token_buffer->DebugPrint("ChoiceError");
 			is_success = false;
 		}
 		token_buffer->ReturnToLastMarkedIndex();
@@ -106,7 +108,7 @@ private:
 				if(memo_info_iter->second.GetIsSuccess()){
 					token_buffer->SetLookAheadIndex(
 						memo_info_iter->second.GetEndTokenIndex());
-					//DebugPrint("short cut by memo.");
+					token_buffer->DebugPrint("short cut by memo.");
 					return ReturnType();
 				}
 				else {

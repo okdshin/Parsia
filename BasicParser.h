@@ -4,7 +4,6 @@
 #include <memory>
 #include <string>
 #include <functional>
-#include "Lexer.h"
 #include "TokenBuffer.h"
 #include "BasicSyntaxRule.h"
 
@@ -14,8 +13,8 @@ template<class RuleReturnType>
 class BasicParser {
 public:
 	using SyntaxRule = BasicSyntaxRule<RuleReturnType>;
-	BasicParser(const lexia::Lexer& lexer) : 
-		token_buffer_(TokenBuffer::Create(lexer)), syntax_rule_dict_(){}
+	BasicParser(const TokenBuffer::NextTokenGetter& next_token_getter) : 
+		token_buffer_(TokenBuffer::Create(next_token_getter)), syntax_rule_dict_(){}
 
 	auto DefineSyntaxRule(const std::string& rule_name) -> const typename SyntaxRule::Ptr {
 		assert("DuplicateDefinition" 

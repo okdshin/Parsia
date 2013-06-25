@@ -1,7 +1,10 @@
 #pragma once
 //TokenBuffer:20130611
 #include <iostream>
-#include "Lexer.h"
+#include <memory>
+#include <functional>
+#include <vector>
+#include "Token.h"
 
 namespace parsia
 {
@@ -21,9 +24,10 @@ private:
 class TokenBuffer{
 public:
 	using Ptr = std::shared_ptr<TokenBuffer>;
+	using NextTokenGetter = std::function<Token ()>;
 
-	static auto Create(const lexia::Lexer& lexer) -> Ptr {
-		return Ptr(new TokenBuffer(lexer));	
+	static auto Create(const NextTokenGetter& next_token_getter) -> Ptr {
+		return Ptr(new TokenBuffer(next_token_getter));	
 	}
 
 	auto DebugPrint(const std::string& text) -> void {
@@ -68,16 +72,16 @@ public:
 		return !marker_list_.empty();	
 	}
 
-	auto LookAheadToken(unsigned int index) -> lexia::Token {
+	auto LookAheadToken(unsigned int index) -> Token {
 		Synchronize(index);
 		return look_ahead_token_list_.at(look_ahead_index_+index-1);	
 	}
 
-	auto LookAheadTokenType(unsigned int index) -> lexia::TokenType {
-		return LookAheadToken(index).GetType();
+	auto LookAheadTokenType(unsigned int index) -> TokenType {
+		return LookAheadToken(index).GetType().ToString();
 	}
 
-	auto Match(const lexia::TokenType& type) -> lexia::Token {
+	auto Match(const TokenType& type) -> Token {
 		const auto token = LookAheadToken(1);
 		if(LookAheadTokenType(1) == type){
 			DebugPrint("Match: "+LookAheadTokenType(1).ToString()
@@ -94,8 +98,8 @@ public:
 	}
 
 private:
-    TokenBuffer(const lexia::Lexer& lexer) : 
-			lexer_(lexer),
+    TokenBuffer(const NextTokenGetter& next_token_getter) : 
+			next_token_getter_(next_token_getter),
 			marker_list_(),
 			look_ahead_token_list_(),
 			look_ahead_index_(0){
@@ -107,7 +111,7 @@ private:
 				- (static_cast<int>(look_ahead_token_list_.size())-1);
 		if(short_num > 0){
 			for(int i = 0; i < short_num; ++i){
-				look_ahead_token_list_.push_back(lexer_.GetNextToken());
+				look_ahead_token_list_.push_back(next_token_getter_());
 			}	
 		}
 	}
@@ -121,9 +125,9 @@ private:
 		Synchronize(1);
 	}
 
-	lexia::Lexer lexer_;
+	NextTokenGetter next_token_getter_;
 	std::vector<int> marker_list_;
-	std::vector<lexia::Token> look_ahead_token_list_;
+	std::vector<Token> look_ahead_token_list_;
 	unsigned int look_ahead_index_;
 };
 }
