@@ -8,15 +8,7 @@ class TokenType{
 public:
 	TokenType() : token_type_str(){}
 	TokenType(const std::string& token_type_str) : token_type_str(token_type_str){}
-
-	static auto EOF_TOKEN_TYPE() -> TokenType {
-		return TokenType("EOF_TOKEN_TYPE");	
-	}
-
-	static auto UNINITIALIZED_TOKEN_TYPE() -> TokenType {
-		return TokenType("UNINITIALIZED_TOKEN_TYPE");	
-	}
-
+	
 	auto ToString()const -> std::string {
 		return token_type_str;	
 	}
@@ -59,14 +51,6 @@ public:
 	Token():type_(), word_(){}
 	Token(const TokenType& type, const Word& word) 
 		: type_(type), word_(word){}
-	
-	auto IsEof()const -> bool {
-		return type_ == TokenType::EOF_TOKEN_TYPE();		
-	}
-	
-	auto IsUninitialized()const -> bool {
-		return type_ == TokenType::UNINITIALIZED_TOKEN_TYPE();		
-	}
 
 	auto GetType()const -> TokenType {
 		return type_;
