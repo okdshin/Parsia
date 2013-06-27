@@ -13,8 +13,12 @@ template<class RuleReturnType>
 class BasicParser {
 public:
 	using SyntaxRule = BasicSyntaxRule<RuleReturnType>;
-	BasicParser(const TokenBuffer::NextTokenGetter& next_token_getter) : 
-		token_buffer_(TokenBuffer::Create(next_token_getter)), syntax_rule_dict_(){}
+	BasicParser() : token_buffer_(), syntax_rule_dict_(){}
+
+	auto InitTokenBuffer(
+			const TokenBuffer::NextTokenGetter& next_token_getter) -> void {
+		token_buffer_ = TokenBuffer::Create(next_token_getter);
+	}
 
 	auto DefineSyntaxRule(const std::string& rule_name) -> const typename SyntaxRule::Ptr {
 		assert("DuplicateDefinition" 
@@ -38,7 +42,7 @@ public:
 private:
 	using SyntaxRuleDict = std::map<std::string, const typename SyntaxRule::Ptr>; 
 	
-	const TokenBuffer::Ptr token_buffer_;
+	TokenBuffer::Ptr token_buffer_;
 	SyntaxRuleDict syntax_rule_dict_;
 
 };
