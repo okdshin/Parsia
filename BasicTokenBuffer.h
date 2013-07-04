@@ -1,10 +1,11 @@
 #pragma once
-//TokenBuffer:20130611
+//BasicTokenBuffer:20130611
 #include <iostream>
 #include <memory>
 #include <functional>
 #include <vector>
-#include "Token.h"
+#include <cassert>
+#include <sstream>
 
 namespace parsia
 {
@@ -21,13 +22,24 @@ private:
 	const std::string message_;
 };
 
-class TokenBuffer{
+template<class Token, class TokenType>
+class BasicTokenBuffer{
 public:
-	using Ptr = std::shared_ptr<TokenBuffer>;
+	using Ptr = std::shared_ptr<BasicTokenBuffer>;
 	using NextTokenGetter = std::function<Token ()>;
+	using IsTokenTypeSameDecider = std::function<bool (const Token&, const TokenType&)>;
+	using TokenOutputter = 
+		std::function<void (std::ostream&, const Token& token)>;
+	using TokenTypeOutputter = 
+		std::function<void (std::ostream&, const TokenType& token)>;
 
-	static auto Create(const NextTokenGetter& next_token_getter) -> Ptr {
-		return Ptr(new TokenBuffer(next_token_getter));	
+	static auto Create(const NextTokenGetter& next_token_getter,
+			const IsTokenTypeSameDecider& is_token_type_same_decider,
+			const TokenOutputter& token_outputter,
+			const TokenTypeOutputter& token_type_outputter) -> Ptr {
+		return Ptr(new BasicTokenBuffer(
+			next_token_getter, is_token_type_same_decider, 
+			token_outputter, token_type_outputter));	
 	}
 
 	auto DebugPrint(const std::string& text) -> void {
@@ -43,8 +55,7 @@ public:
 			if(i == look_ahead_index_){
 				std::cout << "*"; 
 			}
-			std::cout << "[" 
-				<< look_ahead_token_list_.at(i).GetWord().ToString() << "] ";	
+			token_outputter_(std::cout, look_ahead_token_list_[i]);
 		}
 		
 		std::cout << "\n" << std::endl;
@@ -74,32 +85,36 @@ public:
 
 	auto LookAheadToken(unsigned int index) -> Token {
 		Synchronize(index);
-		return look_ahead_token_list_.at(look_ahead_index_+index-1);	
-	}
-
-	auto LookAheadTokenType(unsigned int index) -> TokenType {
-		return LookAheadToken(index).GetType().ToString();
+		assert(look_ahead_index_+index-1 < look_ahead_token_list_.size());
+		return look_ahead_token_list_[look_ahead_index_+index-1];	
 	}
 
 	auto Match(const TokenType& type) -> Token {
 		const auto token = LookAheadToken(1);
-		if(LookAheadTokenType(1) == type){
-			DebugPrint("Match: "+LookAheadTokenType(1).ToString()
-				+" "+LookAheadToken(1).GetWord().ToString());
+		std::ostringstream token_oss, type_oss;
+		token_outputter_(token_oss, token);
+		token_type_outputter_(type_oss, type);
+		if(is_token_type_same_decider_(token, type)){
+			DebugPrint("Match: "+token_oss.str()+" is "+type_oss.str());
 			Consume();	
 		}
 		else {
-			DebugPrint("MatchError: expecting "+type.ToString()
-				+" but "+LookAheadTokenType(1).ToString()
-				+" "+LookAheadToken(1).GetWord().ToString());
-			throw SyntaxError("SyntaxError: invalid syntax.: "+type.ToString());	
+			DebugPrint("MatchError: expecting "+type_oss.str()
+				+" but "+token_oss.str());
+			throw SyntaxError("SyntaxError: invalid syntax.");	
 		}
 		return token;
 	}
 
 private:
-    TokenBuffer(const NextTokenGetter& next_token_getter) : 
+    BasicTokenBuffer(const NextTokenGetter& next_token_getter, 
+				const IsTokenTypeSameDecider& is_token_type_same_decider,
+				const TokenOutputter& token_outputter,
+				const TokenTypeOutputter& token_type_outputter) :
 			next_token_getter_(next_token_getter),
+			is_token_type_same_decider_(is_token_type_same_decider),
+			token_outputter_(token_outputter),
+			token_type_outputter_(token_type_outputter),
 			marker_list_(),
 			look_ahead_token_list_(),
 			look_ahead_index_(0){
@@ -126,6 +141,10 @@ private:
 	}
 
 	NextTokenGetter next_token_getter_;
+	IsTokenTypeSameDecider is_token_type_same_decider_;
+	TokenOutputter token_outputter_;
+	TokenTypeOutputter token_type_outputter_;
+
 	std::vector<int> marker_list_;
 	std::vector<Token> look_ahead_token_list_;
 	unsigned int look_ahead_index_;

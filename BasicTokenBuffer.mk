@@ -1,9 +1,9 @@
 CXX = g++ -std=gnu++11
-CXXFLAGS = -Wall -g -D TOKENBUFFER_UNIT_TEST
+CXXFLAGS = -Wall -g -D BASICTOKENBUFFER_UNIT_TEST
 INCLUDES = 
 LIBS = -lboost_regex
-OBJS = TokenBuffer.o
-PROGRAM = TokenBuffer.out
+OBJS = BasicTokenBuffer.o
+PROGRAM = BasicTokenBuffer.out
 
 all:$(PROGRAM)
 

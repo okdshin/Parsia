@@ -5,7 +5,7 @@
 #include <streambuf>
 
 using namespace parsia;
-using Parser = BasicParser<int>;
+using Parser = BasicParser<int, int, int>;
 
 int main(int argc, char* argv[])
 {
