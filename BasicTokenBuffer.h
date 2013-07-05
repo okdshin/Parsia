@@ -45,7 +45,7 @@ public:
 	auto DebugPrint(const std::string& text) -> void {
 #ifdef PARSIA_TOKEN_BUFFER_DEBUG_ON
 		if(IsSpeculating()){
-			std::cout << "Speculating: " << text << std::endl;
+			std::cout << "\033[36mSpeculating: \033[39m" << text << std::endl;
 		}
 		else {
 			std::cout << text << std::endl;	
@@ -53,9 +53,10 @@ public:
 		std::cout << "\t";
 		for(unsigned int i = 0; i < look_ahead_token_list_.size(); ++i){
 			if(i == look_ahead_index_){
-				std::cout << "*"; 
+				std::cout << "\033[31m@\033[39m"; 
 			}
 			token_outputter_(std::cout, look_ahead_token_list_[i]);
+			std::cout << " ";
 		}
 		
 		std::cout << "\n" << std::endl;
@@ -79,7 +80,7 @@ public:
 		marker_list_.pop_back();	
 	} 
 
-	auto IsSpeculating() -> const bool {
+	auto IsSpeculating()const -> const bool {
 		return !marker_list_.empty();	
 	}
 

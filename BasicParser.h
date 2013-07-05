@@ -20,6 +20,10 @@ public:
 			return this->ProcessRule(rule_name);
 		})){}
 
+	auto DebugPrint(const std::string& message)const -> void {
+		token_buffer_->DebugPrint(message);	
+	}
+
 	auto InitTokenBuffer(const typename TokenBuffer::NextTokenGetter& next_token_getter,
 			const typename TokenBuffer::IsTokenTypeSameDecider& decider,
 			const typename TokenBuffer::TokenOutputter& token_outputter,
@@ -30,6 +34,8 @@ public:
 
 	auto DefineSyntaxRule(
 			const std::string& rule_name) -> const typename SyntaxRule::Ptr {
+		assert("Please call InitTokenBuffer before define syntax rule." 
+			&& token_buffer_ != nullptr);
 		assert("DuplicateDefinition" 
 			&& syntax_rule_dict_.find(rule_name) == syntax_rule_dict_.end());
 		const auto syntax_rule = SyntaxRule::Create(token_buffer_);
