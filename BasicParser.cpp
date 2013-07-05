@@ -35,7 +35,8 @@ int main(int argc, char* argv[])
 	parser.DefineSyntaxRule("test_rule")
 		->AddChoice([](const SyntaxRule::TokenMatcher& matcher, 
 				const SyntaxRule::AheadTokenLooker& looker, 
-				const SyntaxRule::RuleProcessor& processor) -> ReturnType {
+				const SyntaxRule::RuleProcessor& processor,
+				const SyntaxRule::IsSpeculatingDecider& decider) -> ReturnType {
 			matcher(TokenType("TEST"));
 			return 1;
 		});

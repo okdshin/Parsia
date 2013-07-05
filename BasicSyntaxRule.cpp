@@ -30,9 +30,11 @@ int main(int argc, char* argv[])
 	auto syntax_rule = SyntaxRule::Create(token_buffer);
 	syntax_rule->AddChoice([](const SyntaxRule::TokenMatcher& matcher, 
 			const SyntaxRule::AheadTokenLooker& looker, 
-			const SyntaxRule::RuleProcessor& processor){
+			const SyntaxRule::RuleProcessor& processor,
+			const SyntaxRule::IsSpeculatingDecider& is_speculating_decider){
 		return 1;
 	});
+	syntax_rule->ProcessRule([](const std::string& rule_name){ return 1; });
     return 0;
 }
 #endif

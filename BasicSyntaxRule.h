@@ -19,8 +19,10 @@ public:
 	using AheadTokenLooker = std::function<const Token (unsigned int)>;
 	using RuleProcessor = 
 		std::function<const ReturnType (const std::string& rule_name)>;
+	using IsSpeculatingDecider = std::function<const bool ()>;
 	using Choice = std::function<const ReturnType (
-		const TokenMatcher&, const AheadTokenLooker&, const RuleProcessor&)>;
+		const TokenMatcher&, const AheadTokenLooker&, 
+		const RuleProcessor&, const IsSpeculatingDecider&)>;
 
 	static auto Create(const typename 
 			BasicTokenBuffer<Token, TokenType>::Ptr& token_buffer) -> Ptr {
@@ -61,14 +63,23 @@ private:
 		ahead_token_looker_([this](unsigned int index) -> const Token {
 			return token_buffer_->LookAheadToken(index);
 		}),
+		is_speculating_decider_([this]() -> const bool {
+			return token_buffer_->IsSpeculating();	
+		}),
 		choice_list_(), memo_(){}
+
+	auto ProcessChoice(const Choice& choice, 
+			const RuleProcessor& rule_processor)const -> const ReturnType {
+		return choice(token_matcher_, ahead_token_looker_, 
+			rule_processor, is_speculating_decider_);	
+	}
 
 	auto SpeculatingChoice(const RuleProcessor& rule_processor, 
 			const Choice& choice)const -> bool {
 		bool is_success = true;
 		token_buffer_->MarkIndex();
 		try {
-			choice(token_matcher_, ahead_token_looker_, rule_processor);	
+			ProcessChoice(choice, rule_processor);
 		}
 		catch(const SyntaxError& e){
 			token_buffer_->DebugPrint("ChoiceError");
@@ -79,14 +90,14 @@ private:
 	}
 
 	auto DoProcessRule(const RuleProcessor& rule_processor) -> ReturnType {
+		assert(!choice_list_.empty());
 		if(choice_list_.size()==1){
-			return choice_list_.front()(
-				token_matcher_, ahead_token_looker_, rule_processor);
+			return ProcessChoice(choice_list_.front(), rule_processor);
 		}
 		else { //Start speculating
 			for(const auto& choice : choice_list_){
 				if(SpeculatingChoice(rule_processor, choice)){
-					return choice(token_matcher_, ahead_token_looker_, rule_processor);	
+					return ProcessChoice(choice, rule_processor);
 				}
 			}
 			throw SyntaxError("SyntaxError: invalid syntax.");
@@ -137,6 +148,7 @@ private:
 	typename BasicTokenBuffer<Token, TokenType>::Ptr token_buffer_;
 	TokenMatcher token_matcher_;
 	AheadTokenLooker ahead_token_looker_;
+	IsSpeculatingDecider is_speculating_decider_;
 	std::vector<Choice> choice_list_;
 	std::map<int, const MemoInformation> memo_;
 };
