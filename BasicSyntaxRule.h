@@ -15,14 +15,15 @@ class BasicSyntaxRule :
 	public std::enable_shared_from_this<BasicSyntaxRule<Token, TokenType, ReturnType>> {
 public:
 	using Ptr = std::shared_ptr<BasicSyntaxRule>;
-	using TokenMatcher = std::function<const ReturnType (const TokenType)>;
+	using TokenMatcher = std::function<const Token (const TokenType&)>;
 	using AheadTokenLooker = std::function<const Token (unsigned int)>;
 	using RuleProcessor = 
 		std::function<const ReturnType (const std::string& rule_name)>;
 	using Choice = std::function<const ReturnType (
 		const TokenMatcher&, const AheadTokenLooker&, const RuleProcessor&)>;
 
-	static auto Create(const BasicTokenBuffer<Token, TokenType>& token_buffer) -> Ptr {
+	static auto Create(const typename 
+			BasicTokenBuffer<Token, TokenType>::Ptr& token_buffer) -> Ptr {
 		return Ptr(new BasicSyntaxRule(token_buffer));	
 	}
 
@@ -51,10 +52,11 @@ private:
 		int end_token_index_;
 	};
 
-	BasicSyntaxRule(const typename BasicTokenBuffer<Token, TokenType>::Ptr& token_buffer) :
+	BasicSyntaxRule(const typename 
+			BasicTokenBuffer<Token, TokenType>::Ptr& token_buffer) :
 		token_buffer_(token_buffer),
-		token_matcher_([this](const Token& token, const TokenType& type) -> const Token {
-			return token_buffer_->Match(token, type);
+		token_matcher_([this](const TokenType& type) -> const Token {
+			return token_buffer_->Match(type);
 		}),
 		ahead_token_looker_([this](unsigned int index) -> const Token {
 			return token_buffer_->LookAheadToken(index);
@@ -83,7 +85,7 @@ private:
 		}
 		else { //Start speculating
 			for(const auto& choice : choice_list_){
-				if(SpeculatingChoice()){
+				if(SpeculatingChoice(rule_processor, choice)){
 					return choice(token_matcher_, ahead_token_looker_, rule_processor);	
 				}
 			}
@@ -96,7 +98,7 @@ private:
 	
 	auto Memoize(int start_token_index, bool is_success) -> void {
 		memo_.insert(std::pair<int, MemoInformation>(start_token_index, 
-			MemoInformation(is_success, token_buffer_->GetLookAheadTokenIndex())));
+			MemoInformation(is_success, token_buffer_->GetLookAheadIndex())));
 	}
 
 	auto ProcessRuleWithMemoization(const RuleProcessor& rule_processor) -> ReturnType {
@@ -118,7 +120,7 @@ private:
 		auto when_speculating_memoizer = 
 			[this, start_token_index](bool is_success) -> void {
 				if(token_buffer_->IsSpeculating()){
-					Memoize(token_buffer_, start_token_index, is_success);
+					Memoize(start_token_index, is_success);
 				}	
 			};
 		try{

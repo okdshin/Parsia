@@ -62,7 +62,7 @@ public:
 #endif
 	}
 
-	auto GetLookAheadIndex()const -> int {
+	auto GetLookAheadIndex()const -> const int {
 		return look_ahead_index_;	
 	}
 
@@ -79,17 +79,17 @@ public:
 		marker_list_.pop_back();	
 	} 
 
-	auto IsSpeculating() -> bool {
+	auto IsSpeculating() -> const bool {
 		return !marker_list_.empty();	
 	}
 
-	auto LookAheadToken(unsigned int index) -> Token {
+	auto LookAheadToken(unsigned int index) -> const Token {
 		Synchronize(index);
 		assert(look_ahead_index_+index-1 < look_ahead_token_list_.size());
 		return look_ahead_token_list_[look_ahead_index_+index-1];	
 	}
 
-	auto Match(const TokenType& type) -> Token {
+	auto Match(const TokenType& type) -> const Token {
 		const auto token = LookAheadToken(1);
 		std::ostringstream token_oss, type_oss;
 		token_outputter_(token_oss, token);

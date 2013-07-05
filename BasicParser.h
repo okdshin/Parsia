@@ -20,9 +20,12 @@ public:
 			return this->ProcessRule(rule_name);
 		})){}
 
-	auto InitTokenBuffer(const typename 
-			TokenBuffer::NextTokenGetter& next_token_getter) -> void {
-		token_buffer_ = TokenBuffer::Create(next_token_getter);
+	auto InitTokenBuffer(const typename TokenBuffer::NextTokenGetter& next_token_getter,
+			const typename TokenBuffer::IsTokenTypeSameDecider& decider,
+			const typename TokenBuffer::TokenOutputter& token_outputter,
+			const typename TokenBuffer::TokenTypeOutputter& token_type_outputter) -> void {
+		token_buffer_ = TokenBuffer::Create(
+			next_token_getter, decider, token_outputter, token_type_outputter);
 	}
 
 	auto DefineSyntaxRule(
