@@ -52,6 +52,11 @@ public:
 		}
 		std::cout << "\t";
 		for(unsigned int i = 0; i < look_ahead_token_list_.size(); ++i){
+			for(const auto marked_index : marker_list_){
+				if(marked_index == i){
+					std::cout << "\033[33m?\033[39m"; 
+				}
+			}
 			if(i == look_ahead_index_){
 				std::cout << "\033[31m@\033[39m"; 
 			}

@@ -24,7 +24,8 @@ public:
 		token_buffer_->DebugPrint(message);	
 	}
 
-	auto InitTokenBuffer(const typename TokenBuffer::NextTokenGetter& next_token_getter,
+	auto InitTokenBuffer(
+			const typename TokenBuffer::NextTokenGetter& next_token_getter,
 			const typename TokenBuffer::IsTokenTypeSameDecider& decider,
 			const typename TokenBuffer::TokenOutputter& token_outputter,
 			const typename TokenBuffer::TokenTypeOutputter& token_type_outputter) -> void {
@@ -46,7 +47,7 @@ public:
 	}
 
 	auto ProcessRule(const std::string& rule_name)const -> const RuleReturnType {
-		assert("No such name syntax rule! "
+		assert("No such name syntax rule."
 			&& syntax_rule_dict_.find(rule_name) != syntax_rule_dict_.end());
 		return syntax_rule_dict_.find(rule_name)->second->ProcessRule(
 			rule_processor_);
