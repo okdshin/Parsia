@@ -1,0 +1,5251 @@
+int num;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:int as TokenType:INT
+matched:int as TokenType:IDENTIFIER
+before:int num;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: num;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:INT, Word:"int"
+
+ num;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:num as TokenType:IDENTIFIER
+before:num;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"num"
+
+;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:int as TokenType:INT
+matched:int as TokenType:IDENTIFIER
+before:int gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:INT, Word:"int"
+
+ gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:gcd as TokenType:IDENTIFIER
+before:gcd(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"gcd"
+
+(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:int as TokenType:INT
+matched:int as TokenType:IDENTIFIER
+before:int a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:INT, Word:"int"
+
+ a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:a as TokenType:IDENTIFIER
+before:a, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:, as TokenType:COMMA
+before:, int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:COMMA, Word:","
+
+ int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:int as TokenType:INT
+matched:int as TokenType:IDENTIFIER
+before:int b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:INT, Word:"int"
+
+ b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:b as TokenType:IDENTIFIER
+before:b)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"b"
+
+)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:)
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+
+{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:{ as TokenType:LEFT_BRACE
+before:{
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_BRACE, Word:"{"
+
+
+	int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:int as TokenType:INT
+matched:int as TokenType:IDENTIFIER
+before:int c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:INT, Word:"int"
+
+ c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:c as TokenType:IDENTIFIER
+before:c;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:gcd as TokenType:IDENTIFIER
+before:gcd(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"gcd"
+
+(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:1 as TokenType:CONSTANT
+before:1, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
+, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:, as TokenType:COMMA
+before:, 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:COMMA, Word:","
+
+ 2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:2 as TokenType:CONSTANT
+before:2);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"2"
+
+);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:);
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+;
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ -1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:- as TokenType:MINUS
+before:-1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:1 as TokenType:CONSTANT
+before:1+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
++2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:+ as TokenType:PLUS
+before:+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:PLUS, Word:"+"
+
+2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:2 as TokenType:CONSTANT
+before:2*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"2"
+
+*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:* as TokenType:MULTIPLY
+before:*3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MULTIPLY, Word:"*"
+
+3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:3 as TokenType:CONSTANT
+before:3/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"3"
+
+/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:/ as TokenType:DIVIDE
+before:/4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:DIVIDE, Word:"/"
+
+4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:4 as TokenType:CONSTANT
+before:4;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"4"
+
+;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ -1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:- as TokenType:MINUS
+before:-1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:1 as TokenType:CONSTANT
+before:1*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
+*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:* as TokenType:MULTIPLY
+before:*2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MULTIPLY, Word:"*"
+
+2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:2 as TokenType:CONSTANT
+before:2+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"2"
+
++3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:+ as TokenType:PLUS
+before:+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:PLUS, Word:"+"
+
+3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:3 as TokenType:CONSTANT
+before:3/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"3"
+
+/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:/ as TokenType:DIVIDE
+before:/4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:DIVIDE, Word:"/"
+
+4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:4 as TokenType:CONSTANT
+before:4;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"4"
+
+;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ -1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:- as TokenType:MINUS
+before:-1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:1 as TokenType:CONSTANT
+before:1+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
++2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:+ as TokenType:PLUS
+before:+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:PLUS, Word:"+"
+
+2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:2 as TokenType:CONSTANT
+before:2*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"2"
+
+*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:* as TokenType:MULTIPLY
+before:*3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MULTIPLY, Word:"*"
+
+3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:3 as TokenType:CONSTANT
+before:3-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"3"
+
+-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:- as TokenType:MINUS
+before:-6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:6 as TokenType:CONSTANT
+before:6/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"6"
+
+/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:/ as TokenType:DIVIDE
+before:/4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:DIVIDE, Word:"/"
+
+4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:4 as TokenType:CONSTANT
+before:4;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"4"
+
+;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ -d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:- as TokenType:MINUS
+before:-d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:d as TokenType:IDENTIFIER
+before:d+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"d"
+
++e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:+ as TokenType:PLUS
+before:+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:PLUS, Word:"+"
+
+e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:e as TokenType:IDENTIFIER
+before:e*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"e"
+
+*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:* as TokenType:MULTIPLY
+before:*f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MULTIPLY, Word:"*"
+
+f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:f as TokenType:IDENTIFIER
+before:f/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"f"
+
+/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:/ as TokenType:DIVIDE
+before:/g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:DIVIDE, Word:"/"
+
+g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:g as TokenType:IDENTIFIER
+before:g;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"g"
+
+;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:c as TokenType:IDENTIFIER
+before:c - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ - 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:- as TokenType:MINUS
+before:- 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+ 1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:1 as TokenType:CONSTANT
+before:1;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
+;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ 1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:1 as TokenType:CONSTANT
+before:1 || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
+ || 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:|| as TokenType:OR
+before:|| 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:OR, Word:"||"
+
+ 2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:2 as TokenType:CONSTANT
+before:2 || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"2"
+
+ || 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:|| as TokenType:OR
+before:|| 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:OR, Word:"||"
+
+ 3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:3 as TokenType:CONSTANT
+before:3 || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"3"
+
+ || 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:|| as TokenType:OR
+before:|| 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:OR, Word:"||"
+
+ 4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:4 as TokenType:CONSTANT
+before:4;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"4"
+
+;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ 1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:1 as TokenType:CONSTANT
+before:1 || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
+ || 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:|| as TokenType:OR
+before:|| 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:OR, Word:"||"
+
+ 2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:2 as TokenType:CONSTANT
+before:2 && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"2"
+
+ && 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:&& as TokenType:AND
+before:&& 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:AND, Word:"&&"
+
+ 3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:3 as TokenType:CONSTANT
+before:3 < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"3"
+
+ < 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:< as TokenType:LOWER_THAN
+before:< 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LOWER_THAN, Word:"<"
+
+ 4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:4 as TokenType:CONSTANT
+before:4 > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"4"
+
+ > 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:> as TokenType:HIGHER_THAN
+before:> 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:HIGHER_THAN, Word:">"
+
+ 5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:5 as TokenType:CONSTANT
+before:5 == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"5"
+
+ == 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+matched:== as TokenType:EQUALEQUAL
+before:== 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUALEQUAL, Word:"=="
+
+ 6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:6 as TokenType:CONSTANT
+before:6 == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"6"
+
+ == 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+matched:== as TokenType:EQUALEQUAL
+before:== 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUALEQUAL, Word:"=="
+
+ 7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:7 as TokenType:CONSTANT
+before:7 == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"7"
+
+ == 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+matched:== as TokenType:EQUALEQUAL
+before:== 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUALEQUAL, Word:"=="
+
+ 8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:8 as TokenType:CONSTANT
+before:8 > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"8"
+
+ > 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:> as TokenType:HIGHER_THAN
+before:> 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:HIGHER_THAN, Word:">"
+
+ 6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:6 as TokenType:CONSTANT
+before:6;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"6"
+
+;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:c as TokenType:IDENTIFIER
+before:c = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"c"
+
+ = gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+before:= gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUAL, Word:"="
+
+ gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:gcd as TokenType:IDENTIFIER
+before:gcd(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"gcd"
+
+(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:1 as TokenType:CONSTANT
+before:1, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"1"
+
+, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:, as TokenType:COMMA
+before:, a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:COMMA, Word:","
+
+ a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:a as TokenType:IDENTIFIER
+before:a);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:);
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+;
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:while as TokenType:WHILE
+matched:while as TokenType:IDENTIFIER
+before:while(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:WHILE, Word:"while"
+
+(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:0 as TokenType:CONSTANT
+before:0){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:CONSTANT, Word:"0"
+
+){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:){;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:{;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+{;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:{ as TokenType:LEFT_BRACE
+before:{;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_BRACE, Word:"{"
+
+;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:} as TokenType:RIGHT_BRACE
+before:}
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_BRACE, Word:"}"
+
+
+	if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:if as TokenType:IF
+matched:if as TokenType:IDENTIFIER
+before:if (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IF, Word:"if"
+
+ (a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:a as TokenType:IDENTIFIER
+before:a == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+ == b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:= as TokenType:EQUAL
+matched:== as TokenType:EQUALEQUAL
+before:== b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:EQUALEQUAL, Word:"=="
+
+ b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:b as TokenType:IDENTIFIER
+before:b) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"b"
+
+) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:) return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+ return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:return as TokenType:RETURN
+matched:return as TokenType:IDENTIFIER
+before:return a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RETURN, Word:"return"
+
+ a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:a as TokenType:IDENTIFIER
+before:a;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+2
+matched:else as TokenType:ELSE
+matched:else as TokenType:IDENTIFIER
+before:else if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:ELSE, Word:"else"
+
+ if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:if as TokenType:IF
+matched:if as TokenType:IDENTIFIER
+before:if (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IF, Word:"if"
+
+ (a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:a as TokenType:IDENTIFIER
+before:a > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+ > b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:> as TokenType:HIGHER_THAN
+before:> b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:HIGHER_THAN, Word:">"
+
+ b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:b as TokenType:IDENTIFIER
+before:b) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"b"
+
+) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:) return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+ return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:return as TokenType:RETURN
+matched:return as TokenType:IDENTIFIER
+before:return gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after: gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RETURN, Word:"return"
+
+ gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:gcd as TokenType:IDENTIFIER
+before:gcd(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:(a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"gcd"
+
+(a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:a-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+a-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:a as TokenType:IDENTIFIER
+before:a-b, b);
+	else return gcd(a, b-a);
+}
+
+after:-b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+-b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:- as TokenType:MINUS
+before:-b, b);
+	else return gcd(a, b-a);
+}
+
+after:b, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+b, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:b as TokenType:IDENTIFIER
+before:b, b);
+	else return gcd(a, b-a);
+}
+
+after:, b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"b"
+
+, b);
+	else return gcd(a, b-a);
+}
+
+0
+matched:, as TokenType:COMMA
+before:, b);
+	else return gcd(a, b-a);
+}
+
+after: b);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:COMMA, Word:","
+
+ b);
+	else return gcd(a, b-a);
+}
+
+1
+matched:b as TokenType:IDENTIFIER
+before:b);
+	else return gcd(a, b-a);
+}
+
+after:);
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"b"
+
+);
+	else return gcd(a, b-a);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:);
+	else return gcd(a, b-a);
+}
+
+after:;
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+;
+	else return gcd(a, b-a);
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+	else return gcd(a, b-a);
+}
+
+after:
+	else return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+	else return gcd(a, b-a);
+}
+
+2
+matched:else as TokenType:ELSE
+matched:else as TokenType:IDENTIFIER
+before:else return gcd(a, b-a);
+}
+
+after: return gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:ELSE, Word:"else"
+
+ return gcd(a, b-a);
+}
+
+1
+matched:return as TokenType:RETURN
+matched:return as TokenType:IDENTIFIER
+before:return gcd(a, b-a);
+}
+
+after: gcd(a, b-a);
+}
+
+NextToken:Token:TokenType:RETURN, Word:"return"
+
+ gcd(a, b-a);
+}
+
+1
+matched:gcd as TokenType:IDENTIFIER
+before:gcd(a, b-a);
+}
+
+after:(a, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"gcd"
+
+(a, b-a);
+}
+
+0
+matched:( as TokenType:LEFT_PARENTHESIS
+before:(a, b-a);
+}
+
+after:a, b-a);
+}
+
+NextToken:Token:TokenType:LEFT_PARENTHESIS, Word:"("
+
+a, b-a);
+}
+
+0
+matched:a as TokenType:IDENTIFIER
+before:a, b-a);
+}
+
+after:, b-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+, b-a);
+}
+
+0
+matched:, as TokenType:COMMA
+before:, b-a);
+}
+
+after: b-a);
+}
+
+NextToken:Token:TokenType:COMMA, Word:","
+
+ b-a);
+}
+
+1
+matched:b as TokenType:IDENTIFIER
+before:b-a);
+}
+
+after:-a);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"b"
+
+-a);
+}
+
+0
+matched:- as TokenType:MINUS
+before:-a);
+}
+
+after:a);
+}
+
+NextToken:Token:TokenType:MINUS, Word:"-"
+
+a);
+}
+
+0
+matched:a as TokenType:IDENTIFIER
+before:a);
+}
+
+after:);
+}
+
+NextToken:Token:TokenType:IDENTIFIER, Word:"a"
+
+);
+}
+
+0
+matched:) as TokenType:RIGHT_PARENTHESIS
+before:);
+}
+
+after:;
+}
+
+NextToken:Token:TokenType:RIGHT_PARENTHESIS, Word:")"
+
+;
+}
+
+0
+matched:; as TokenType:SEMICOLON
+before:;
+}
+
+after:
+}
+
+NextToken:Token:TokenType:SEMICOLON, Word:";"
+
+
+}
+
+1
+matched:} as TokenType:RIGHT_BRACE
+before:}
+
+after:
+
+NextToken:Token:TokenType:RIGHT_BRACE, Word:"}"
+
+
+
+1
